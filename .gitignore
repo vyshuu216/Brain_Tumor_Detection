@@ -1,0 +1,7 @@
+venv/
+Brain_Tumor_Dataset/
+.ipynb_checkpoints/
+templates/.ipynb_checkpoints/
+static/uploads/
+__pycache__/
+*.pyc
