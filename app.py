@@ -7,7 +7,6 @@ from gradcam import generate_gradcam
 app = Flask(__name__)
 
 UPLOAD_FOLDER = "static/uploads"
-
 app.config["UPLOAD_FOLDER"] = UPLOAD_FOLDER
 
 os.makedirs(UPLOAD_FOLDER, exist_ok=True)
@@ -52,4 +51,9 @@ def predict():
 
 
 if __name__ == "__main__":
-    app.run(debug=True)
+    port = int(os.environ.get("PORT", 10000))
+    app.run(
+        host="0.0.0.0",
+        port=port,
+        debug=False
+    )
